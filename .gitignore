@@ -94,6 +94,7 @@ obj/
 .idea/assetWizardSettings.xml
 .idea/gradle.xml
 .idea/jarRepositories.xml
+.idea/kotlinScripting.xml
 .idea/navEditor.xml
 
 # Legacy Eclipse project files

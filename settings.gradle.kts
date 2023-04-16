@@ -13,4 +13,8 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "MercySkeleton"
-include ':app'
+include (":app")
+
+plugins{
+  "kotlin-dsl"
+}

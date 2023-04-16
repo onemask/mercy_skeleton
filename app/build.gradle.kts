@@ -1,6 +1,8 @@
 plugins {
     id ("com.android.application")
     id ("org.jetbrains.kotlin.android")
+    kotlin("kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -47,6 +49,11 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+
+  // Allow references to generated code
+    kapt {
+      correctErrorTypes = true
+    }
 }
 
 dependencies {
@@ -73,4 +80,7 @@ dependencies {
   val nav_version = "2.5.3"
   implementation("androidx.navigation:navigation-compose:$nav_version")
 
+  val hilt_version = "2.44"
+  implementation("com.google.dagger:hilt-android:$hilt_version")
+  kapt("com.google.dagger:hilt-android-compiler:$hilt_version")
 }

@@ -29,6 +29,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.mercy.skeleton.ui.theme.MercySkeletonTheme
+import com.mercy.skeleton.vm.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -37,7 +38,8 @@ class MainActivity : ComponentActivity() {
     super.onCreate(savedInstanceState)
     setContent {
       MercySkeletonTheme {
-        // A surface container using the 'background' color from the theme
+        val viewModel = MainViewModel()
+        viewModel.getDog()
         Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
           OnBoardingScreen("I'm not superstitious, but I am a little stitious")
         }

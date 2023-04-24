@@ -81,8 +81,12 @@ dependencies {
   implementation("androidx.compose.material3:material3")
   debugImplementation("androidx.compose.ui:ui-test-manifest")
 
+  val lifecycle_version = "2.5.1"
+  implementation("androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycle_version")
+
   val nav_version = "2.5.3"
   implementation("androidx.navigation:navigation-compose:$nav_version")
+  implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
 
   val hilt_version = "2.44"
   implementation("com.google.dagger:hilt-android:$hilt_version")
@@ -97,7 +101,6 @@ dependencies {
   implementation("io.ktor:ktor-server-content-negotiation:$ktor_version")
   implementation("io.ktor:ktor-serialization-kotlinx-json:$ktor_version")
   implementation("io.ktor:ktor-client-content-negotiation:$ktor_version")
-
 
   val coroutines_version = "1.3.9"
   implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version")

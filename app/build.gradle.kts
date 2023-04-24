@@ -105,5 +105,7 @@ dependencies {
   val serialization_version = "1.5.0"
   implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:$serialization_version")
 
+  val coil_version = "2.3.0"
+  implementation("io.coil-kt:coil-compose:$coil_version")
 
 }

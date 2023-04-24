@@ -3,6 +3,7 @@ package com.mercy.skeleton
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.viewModels
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -38,7 +39,7 @@ class MainActivity : ComponentActivity() {
     super.onCreate(savedInstanceState)
     setContent {
       MercySkeletonTheme {
-        val viewModel = MainViewModel()
+        val viewModel by viewModels<MainViewModel>()
         viewModel.getDog()
         Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
           OnBoardingScreen("I'm not superstitious, but I am a little stitious")

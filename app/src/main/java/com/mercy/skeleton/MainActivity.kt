@@ -47,7 +47,7 @@ class MainActivity : ComponentActivity() {
       val navController = rememberNavController()
       Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
         NavHost(navController = navController, startDestination = OnBoardingScreen.Start.name) {
-          composable(route = OnBoardingScreen.Start.name) {
+          composable(route = OnBoardingScreen.Start.route) {
             val viewModel by viewModels<MainViewModel>()
             StartOnBoardingScreen(
               viewModel = viewModel,
@@ -67,9 +67,9 @@ class MainActivity : ComponentActivity() {
     }
   }
 
-  enum class OnBoardingScreen(name: String) {
-    Start(name = "start"),
-    END(name = "end")
+  enum class OnBoardingScreen(val route: String) {
+    Start(route = "start"),
+    END(route = "end")
   }
 
   @Composable
